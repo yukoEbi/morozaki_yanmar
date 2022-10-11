@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* ---------------------------------------
+	Header
+-----------------------------------------*/
+@use "../config";
+@use "../mixin";
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgba(255,255,255,0.8);
+	z-index: 10;
+	transition: 0.5s;
+	@include mixin.tab{
+		height: 70px;
+	}
+	&__wrap {
+		@include mixin.containerWrap();
+		padding: 20px 0;
+		@include mixin.flexCenter(y);
+		justify-content: space-between;
+		@include mixin.tab{
+			padding: 10px 0;
+		}
+	}
+	&__logo {
+		img{
+			&:hover{
+				@include mixin.imgHover();
+			}
+			@include mixin.tab{
+				height: 50px;
+			}
+			&.logo_img02{
+				display: none;
+			}
+		}
+	}
+	&.fixed{
+		background-color: rgba(4, 30, 83, 0.6);
+		.header{
+			&__logo{
+				img{
+					&.logo_img01{
+						display: none;
+					}
+					&.logo_img02{
+						display: block;
+					}
+				}
+			}
+		}
+		nav{
+			a{
+				color: #fff;
+			}
+		}
+	}
+}

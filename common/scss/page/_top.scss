@@ -1,0 +1,227 @@
+@charset "utf-8";
+/* ---------------------------------------
+	Top
+-----------------------------------------*/
+@use "../config";
+@use "../mixin";
+
+.section {
+	&__wrap {
+		@include mixin.containerWrap();
+	}
+	&__title {
+		font-family: config.$fontSerif;
+		font-size: 38px;
+		margin: 0 0 3rem 0;
+		@include mixin.tab{
+			@include mixin.font-vw(38,375);
+		}
+		span{
+			display: inline-block;
+			font-size: 16px;
+			margin: 0 0 0 2rem;
+			@include mixin.tab{
+				@include mixin.font-vw(16,375);
+			}
+		}
+	}
+	&.profile{
+		width: 100%;
+		min-height: 1100px;
+		height: 100%;
+		background-image: url(../img/page/top/bg01.png);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		margin-top: -120px;
+		.section__wrap{
+			display: flex;
+			justify-content: flex-end;
+			padding: 150px 0 0 0;
+			a[href^="tel:"] {
+				color: #fff;
+			}
+		}
+		.profile_box{
+			width: 60%;
+			color: #fff;
+			@include mixin.tab{
+				width: 100%;
+			}
+			table{
+				width: 100%;
+				@include mixin.tab{
+					@include mixin.font-vw(16,375);
+					margin-bottom: 3rem;
+				}
+				th,td{
+					padding: 0.5rem 1rem;
+					box-sizing: border-box;
+					@include mixin.line-height();
+				}
+				th{
+					white-space: nowrap;
+					text-align: right;
+				}
+			}
+		}
+	}
+	&.history{
+		width: 100%;
+		min-height: 1150px;
+		background-image: url(../img/page/top/bg02.png);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		.section__wrap{
+			@include mixin.flexCenter(y);
+			padding: 50px 0 0 0;
+			justify-content: space-between;
+			@include mixin.tab{
+				flex-direction: column;
+			}
+		}
+		.history_box{
+			width: 60%;
+			@include mixin.tab{
+				width: 100%;
+			}
+			table{
+				width: 100%;
+				@include mixin.tab{
+					@include mixin.font-vw(16,375);
+				}
+				th,td{
+					padding: 0.5rem 1rem;
+					@include mixin.line-height();
+				}
+				th{
+					white-space: nowrap;
+					text-align: right;
+				}
+			}
+		}
+		.history_img{
+			width: 500px;
+			@include mixin.pc{
+				width: 40%;
+			}
+			@include mixin.tab{
+				width: 100%;
+			}
+			img{
+				@include mixin.imgFluid();
+			}
+		}
+	}
+	&.recruit{
+		width: 100%;
+		min-height: 980px;
+		background-image: url(../img/page/top/bg03.png);
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		background-size: cover;
+		position: relative;
+		z-index: 1;
+		.section__wrap{
+			padding: 80px 0 0 0;
+		}
+		.recruit_box{
+			width: 680px;
+			padding: 50px;
+			background-color: rgba(255,255,255,0.9);
+			box-sizing: border-box;
+			@include mixin.tab{
+				width: 100%;
+				padding: 10px;
+			}
+			table{
+				width: 100%;
+				@include mixin.tab{
+					@include mixin.font-vw(16,375);
+				}
+				th,td{
+					padding: 0.5rem 1rem;
+					text-align: left;
+					@include mixin.line-height();
+				}
+				th{
+					white-space: nowrap;
+				}
+			}
+		}
+	}
+	&.contact{
+		width: 100%;
+		min-height: 1000px;
+		background-image: url(../img/page/top/bg04.png);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		margin-top: -120px;
+		.section__wrap{
+			padding: 150px 0 0;
+			display: flex;
+			justify-content: flex-end;
+		}
+		.contact_box{
+			width: 750px;
+			color: #fff;
+			@include mixin.tab{
+				width: 100%;
+			}
+			p{
+				@include mixin.line-height();
+				@include mixin.tab{
+					@include mixin.font-vw(16,375);
+				}
+			}
+			table{
+				width: 100%;
+				@include mixin.tab{
+					@include mixin.font-vw(16,375);
+				}
+				th,td{
+					padding: 1rem;
+					box-sizing: border-box;
+					@include mixin.line-height();
+					@include mixin.tab{
+						display: block;
+						width: 100%;
+					}
+				}
+				th{
+					white-space: nowrap;
+					vertical-align: top;
+					text-align: left;
+				}
+				input[type="text"],
+				input[type="email"],
+				textarea{
+					width: 100%;
+					padding: 1rem;
+					box-sizing: border-box;
+					@include mixin.tab{
+						width: 100%;
+					}
+				}
+				input[type="submit"]{
+					background-color: #0099cc;
+					min-width: 280px;
+					font-size: 22px;
+					color: #fff;
+					border: none;
+					padding: 1rem 0;
+					box-sizing: border-box;
+					cursor: pointer;
+					@include mixin.tab{
+						min-width: 100%;
+						@include mixin.font-vw(22,375);
+					}
+				}
+			}
+		}
+	}
+}
+
+
