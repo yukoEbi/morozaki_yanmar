@@ -44,4 +44,14 @@
 			}
 		}
 	}
+	&__img{
+		position: absolute;
+		top: 600px;
+		@include mixin.tab{
+			display: none;
+		}
+		img{
+			width: 420px;
+		}
+	}
 }

@@ -641,6 +641,18 @@ a:hover {
     font-size: 4.8vw;
   }
 }
+.keyVisual__img {
+  position: absolute;
+  top: 600px;
+}
+@media screen and (max-width: 768px) {
+  .keyVisual__img {
+    display: none;
+  }
+}
+.keyVisual__img img {
+  width: 420px;
+}
 
 /* ---------------------------------------
 	Footer
