@@ -701,6 +701,9 @@ a:hover {
     font-size: 5.3333333333vw;
   }
 }
+.footer a[href^="tel:"] {
+  color: #fff;
+}
 .footer address {
   font-style: normal;
   text-align: center;
